@@ -20,7 +20,7 @@ export const loadMicroservice = async (): Promise<INestMicroservice> => {
 
   const protoPath = join(
     __dirname,
-    './../../node_modules/@sales-cms-project/lib-proto/proto/auth.proto',
+    './../../../node_modules/@sales-cms-project/lib-proto/proto/auth.proto',
   );
   const microservice = await NestFactory.createMicroservice(AppModule, {
     transport: Transport.GRPC,
