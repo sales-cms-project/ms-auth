@@ -4,15 +4,15 @@ import {
   TokenDto,
 } from './domain/proto/auth.pb';
 import { Observable } from 'rxjs';
-import { GrpcMethod, GrpcService } from '@nestjs/microservices';
+import { GrpcMethod } from '@nestjs/microservices';
+import { Controller } from '@nestjs/common';
 
 type AppControllerDefault = Pick<
   AuthServiceController,
   'signup' | 'deleteAuthCredential' | 'signin'
 >;
 
-//@Controller()
-@GrpcService(AUTH_SERVICE_NAME)
+@Controller()
 export class AppController implements AppControllerDefault {
   @GrpcMethod(AUTH_SERVICE_NAME)
   signup(): TokenDto {
