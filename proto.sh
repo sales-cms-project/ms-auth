@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 npx protoc \
     --plugin=node_modules/.bin/protoc-gen-ts_proto \
