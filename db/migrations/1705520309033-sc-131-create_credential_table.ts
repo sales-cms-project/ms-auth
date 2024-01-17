@@ -9,12 +9,18 @@ export class Sc131CreateCredentialTable1705520309032
         name: 'credentials',
         columns: [
           {
-            name: 'user_id',
+            name: 'id',
             type: 'bigint',
             isPrimary: true,
             isGenerated: true,
             generationStrategy: 'increment',
             unsigned: true,
+          },
+          {
+            name: 'user_uuid',
+            type: 'varchar',
+            isNullable: false,
+            isUnique: true,
           },
           {
             name: 'password',
