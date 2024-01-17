@@ -45,6 +45,6 @@ export class Sc131CreateCredentialTable1705520309032
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('credential');
+    await queryRunner.dropTable('credentials');
   }
 }
