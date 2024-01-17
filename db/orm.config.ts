@@ -19,7 +19,6 @@ export const dataSourceOptions: DataSourceOptions = {
   },
   logging: !!process.env.DB_DISPLAY_LOGGING,
 };
-
 const migrationDataSourceOptions: DataSourceOptions = Object.assign(
   {},
   dataSourceOptions,
