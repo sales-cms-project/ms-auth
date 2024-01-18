@@ -17,7 +17,7 @@ export class AppController implements AppControllerDefault {
   @GrpcMethod(AUTH_SERVICE_NAME)
   signup(): TokenDto {
     return {
-      token: 'new Token',
+      token: 'new Token s',
     };
   }
 
