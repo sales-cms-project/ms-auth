@@ -5,16 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug core-service",
             "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/src/main.ts",
-            "preLaunchTask": "tsc: watch - tsconfig.build.json",
-            "outFiles": ["${workspaceFolder}/dist/**/*.js"],
-            "skipFiles": [
-              "${workspaceFolder}/node_modules/**/*.js",
-              "<node_internals>/**/*.js"
-            ]
+            "request": "attach",
+            "remoteRoot": "/app",
+            "port": 9229,
+            "restart": true
         }
     ]
 }
